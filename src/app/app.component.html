@@ -1,3 +1,62 @@
 <h1>
-  {{title}}
+  This is a App generate with angular-cli <br/>
+
+  Name of this application : {{title}}
+  
 </h1>
+
+
+<div id='header'>
+  <div id="headerContents">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <h1>CDS Web</h1>
+        </div>
+        <ul class="nav nav-pills">
+          <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ><a routerLink="/" id="cdsWebNavToHome" >Root</a></li>
+          <li routerLinkActive="active" ><a routerLink="/mycomp" id="cdsWebNavToCalculationPrepare" >mycomponent</a></li>
+          <li routerLinkActive="active" ><a routerLink="/mycomp2" id="cdsWebNavToCalculationManual" >mycomponent2</a></li>
+          <li routerLinkActive="active" ><a routerLink="/mycomp3" id="cdsWebNavToCalculationManual" >mycomponent3s</a></li>
+        </ul>
+      </div>
+      <div id="user">
+        e <span id="username">[x]</span> |
+        <a class="link-lang" (click)="useLanguage('fr')" id="cdsWebSwitchToFr">FR</a> |
+        <a class="link-lang" (click)="useLanguage('nl')" id="cdsWebSwitchToNl">NL</a> |
+        <a class="link-lang" (click)="useLanguage('en')" id="cdsWebSwitchToEn">EN</a>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+
+
+<!-- No need - Use Navigation instead (router-outlet)
+
+<h2>
+  
+<h1>AppComponent</h1>
+
+  <app-mycomponent>loading...</app-mycomponent>
+  
+  Name of the component : {{componentName}}
+
+  <my-app class="container" style="display: block">Loading collapse example...</my-app>
+
+
+</h2>
+
+<h1>mycomponent2</h1>
+
+<div>
+
+  <app-mycomponent2></app-mycomponent2>
+
+</div>
+-->
